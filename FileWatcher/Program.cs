@@ -2,6 +2,7 @@
 using FileWatcher.Interface;
 using FileWatcher.Models;
 using FileWatcher.Service;
+using Ninject;
 
 namespace FileWatcher
 {
@@ -10,7 +11,7 @@ namespace FileWatcher
 
         static void Main(string[] args)
         {
-            
+            IKernel kernel = new StandardKernel();
             // set up your basic configurations here
             var settings = new ConfigurationSetting
                 {
