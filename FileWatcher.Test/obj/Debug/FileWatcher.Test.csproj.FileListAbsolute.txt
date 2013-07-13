@@ -1,0 +1,16 @@
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\FileWatcher.Test.dll
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\FileWatcher.Test.pdb
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\FileWatcher.exe
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\FluentAssertions.dll
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\xunit.dll
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\xunit.extensions.dll
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\FileWatcher.pdb
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\FluentAssertions.pdb
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\FluentAssertions.xml
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\xunit.xml
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\xunit.extensions.xml
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\obj\Debug\FileWatcher.Test.csprojResolveAssemblyReference.cache
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\obj\Debug\FileWatcher.Test.dll
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\obj\Debug\FileWatcher.Test.pdb
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\EntityFramework.dll
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\EntityFramework.xml

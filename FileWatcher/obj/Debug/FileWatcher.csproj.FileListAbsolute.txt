@@ -1,0 +1,10 @@
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\FileWatcher.exe.config
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\FileWatcher.exe
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\FileWatcher.pdb
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\obj\Debug\FileWatcher.csprojResolveAssemblyReference.cache
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\obj\Debug\FileWatcher.exe
+c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\obj\Debug\FileWatcher.pdb
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\EntityFramework.dll
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\EntityFramework.xml
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\EntityFramework.SqlServer.xml
