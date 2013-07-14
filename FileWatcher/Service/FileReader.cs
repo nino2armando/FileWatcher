@@ -22,10 +22,8 @@ namespace FileWatcher.Service
         /// <exception cref="System.ArgumentNullException">path</exception>
         public bool TryGetFile(string path)
         {
-            if (string.IsNullOrEmpty(path))
-            {
-                throw new ArgumentNullException("path");
-            }
+            // validate the input
+            this.PreCheckInput(path, "path");
 
             if (File.Exists(path))
             {
@@ -43,6 +41,7 @@ namespace FileWatcher.Service
         /// <exception cref="System.NotImplementedException"></exception>
         public XmlData GetContent(string path)
         {
+            this.PreCheckInput(path, "path");
 
             XmlData result = null;
             try
@@ -74,6 +73,23 @@ namespace FileWatcher.Service
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Pres the check input.
+        /// </summary>
+        /// <param name="param">The param.</param>
+        /// <param name="paramName">Name of the param.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentNullException"></exception>
+        public ArgumentNullException PreCheckInput(string param, string paramName)
+        {
+            if (string.IsNullOrEmpty(param))
+            {
+                throw new ArgumentNullException(paramName);
+            }
+
+            return null;
         }
     }
 }

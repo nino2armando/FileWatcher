@@ -1,4 +1,5 @@
-﻿using FileWatcher.Models;
+﻿using System;
+using FileWatcher.Models;
 
 namespace FileWatcher.Interface
 {
@@ -20,6 +21,15 @@ namespace FileWatcher.Interface
         /// <param name="innerXml">The inner XML.</param>
         /// <returns></returns>
         XmlData GetContent(string path);
+
+
+        /// <summary>
+        /// Pres the check input.
+        /// </summary>
+        /// <param name="param">The param.</param>
+        /// <param name="paramName">Name of the param.</param>
+        /// <returns></returns>
+        ArgumentNullException PreCheckInput(string param, string paramName);
 
     }
 }
