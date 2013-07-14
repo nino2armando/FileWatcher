@@ -16,14 +16,16 @@ namespace FileWatcher.Context
         public void InitializeDatabase(FileWatcherContext context)
         {
             bool dbExist;
+
             using (new TransactionScope(TransactionScopeOption.Suppress))
             {
                 dbExist = context.Database.Exists();
             }
-            if (dbExist)
+
+            if (!dbExist)
             {
                 // drop Database
-                context.Database.ExecuteSqlCommand("ALTER DATABASE FileWatcher SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
+               // context.Database.ExecuteSqlCommand("ALTER DATABASE FileWatcher SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
                 context.Database.Delete();
 
                 // create all database
@@ -31,11 +33,6 @@ namespace FileWatcher.Context
 
                 context.SaveChanges();
 
-            }
-            else
-            {
-                // create all database
-                ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
             }
         }
     }
