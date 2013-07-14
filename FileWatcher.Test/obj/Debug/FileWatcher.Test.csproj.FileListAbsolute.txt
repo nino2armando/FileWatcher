@@ -17,3 +17,6 @@ C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Ninject.dll
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Ninject.pdb
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Ninject.xml
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Moq.dll
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Moq.pdb
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Moq.xml
