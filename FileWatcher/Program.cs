@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using FileWatcher.Interface;
 using FileWatcher.Models;
 using FileWatcher.Service;
@@ -12,6 +13,9 @@ namespace FileWatcher
         static void Main(string[] args)
         {
             IKernel kernel = new StandardKernel();
+            kernel.Load(Assembly.GetExecutingAssembly());
+            IFileReader fileReader = kernel.Get<IFileReader>();
+
             // set up your basic configurations here
             var settings = new ConfigurationSetting
                 {
@@ -21,7 +25,7 @@ namespace FileWatcher
                 };
 
             // call the service
-            IMainFileWatcher watcher = new MainFileWatcher();
+            IMainFileWatcher watcher = new MainFileWatcher(fileReader);
 
             // pass the config
             watcher.SetConfiguration(settings);

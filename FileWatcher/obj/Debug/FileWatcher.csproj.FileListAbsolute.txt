@@ -8,3 +8,6 @@ C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\EntityFramework.xml
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\Ninject.dll
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\Ninject.pdb
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher\bin\Debug\Ninject.xml

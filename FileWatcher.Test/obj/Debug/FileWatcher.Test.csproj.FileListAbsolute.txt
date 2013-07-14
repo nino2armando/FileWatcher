@@ -14,3 +14,6 @@ c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test
 c:\users\nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\obj\Debug\FileWatcher.Test.pdb
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\EntityFramework.dll
 C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\EntityFramework.xml
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Ninject.dll
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Ninject.pdb
+C:\Users\Nino\documents\visual studio 2012\Projects\FileWatcher\FileWatcher.Test\bin\Debug\Ninject.xml

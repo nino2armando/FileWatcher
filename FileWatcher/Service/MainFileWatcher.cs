@@ -13,10 +13,12 @@ namespace FileWatcher.Service
     public class MainFileWatcher : IMainFileWatcher
     {
         private readonly FileSystemWatcher _fileSystemWatcher;
+        private static IFileReader _fileReader;
 
-        public MainFileWatcher()
+        public MainFileWatcher(IFileReader fileReader)
         {
             _fileSystemWatcher = new FileSystemWatcher();
+            _fileReader = fileReader;
         }
 
         /// <summary>
@@ -54,8 +56,7 @@ namespace FileWatcher.Service
             DisplayMessage(e);
 
             // call the file reader
-            IFileReader reader = new FileReader();
-            var data = reader.GetContent(e.FullPath);
+            var data = _fileReader.GetContent(e.FullPath);
             data.AppId = Guid.NewGuid();
 
             var unitOfWork = new UnitOfWork<FileWatcherContext>();

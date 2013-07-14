@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\Bindings.cs" />
     <Compile Include="Context\DropCreateDatabase.cs" />
     <Compile Include="Interface\IDbContext.cs" />
     <Compile Include="Interface\IFileReader.cs" />
