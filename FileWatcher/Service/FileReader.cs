@@ -48,7 +48,7 @@ namespace FileWatcher.Service
             {
                 var doc = XDocument.Load(path);
 
-                // you need to make sure to validate your schema againts xsd
+                //todo: you need to make sure to validate your schema againts xsd
                 // http://msdn.microsoft.com/en-us/library/thydszwy.aspx
 
                 result = (from a in doc.Descendants("note")
@@ -64,11 +64,18 @@ namespace FileWatcher.Service
             {
                 
                 Console.WriteLine(e.Message);
+
+                //todo: 
+                // you might want to handle this exception more gracefully
+                // for application flow
                 throw new XmlException(e.Message);
             }
 
             if (result == null)
             {
+                //todo: 
+                // you might want to handle this exception more gracefully
+                // for application flow
                 throw new NullReferenceException("result");
             }
 

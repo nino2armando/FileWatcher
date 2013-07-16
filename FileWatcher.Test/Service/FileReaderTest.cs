@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using FileWatcher.Models;
 using FileWatcher.Service;
 using Moq;
@@ -40,17 +41,14 @@ namespace FileWatcher.Test
         }
 
         [Fact]
-        public void ShouldThrowNullReferenceExceptionIfResultNull()
+        public void ShouldThrowXmlExceptionIfResultNull()
         {
-            // need to test the inner of the method
-            //var xml = this.TestVector();
-            //var fileReader = new Mock<IFileReader>(MockBehavior.Strict);
-            //fileReader.Setup(s => s.GetContent(It.IsAny<string>())).Throws<NullReferenceException>();
+            // pass the empty file to provoke the exception
+            var path = @"C:\Users\Nino\Desktop\test\file2.xml";
+            IFileReader reader = new FileReader();
+            var ex = Assert.Throws<XmlException>(() => reader.GetContent(path));
 
-            //var ex =
-            //    Assert.Throws<NullReferenceException>(() => fileReader.Object.GetContent(string.Empty));
-
-            //Assert.Equal(ex.GetType(), typeof(ArgumentNullException));
+            Assert.Equal(ex.GetType(), typeof(XmlException));
         }
 
         [Fact]

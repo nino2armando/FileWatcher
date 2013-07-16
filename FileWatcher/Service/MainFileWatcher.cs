@@ -14,11 +14,13 @@ namespace FileWatcher.Service
     {
         private readonly FileSystemWatcher _fileSystemWatcher;
         private static IFileReader _fileReader;
+        private static IUnitOfWork _unitOfWork;
 
-        public MainFileWatcher(IFileReader fileReader)
+        public MainFileWatcher(IFileReader fileReader, IUnitOfWork unitOfWork)
         {
             _fileSystemWatcher = new FileSystemWatcher();
             _fileReader = fileReader;
+            _unitOfWork = unitOfWork;
         }
 
         /// <summary>
@@ -27,6 +29,11 @@ namespace FileWatcher.Service
         /// <param name="setting">The setting.</param>
         public void SetConfiguration(ConfigurationSetting setting)
         {
+            if (setting == null)
+            {
+                throw new ArgumentNullException("setting");
+            }
+
             _fileSystemWatcher.Path = setting.Path;
             _fileSystemWatcher.EnableRaisingEvents = setting.RaiseEvent;
             _fileSystemWatcher.Filter = setting.Extention;
@@ -41,7 +48,7 @@ namespace FileWatcher.Service
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="e">The <see cref="FileSystemEventArgs"/> instance containing the event data.</param>
-        public static void OnChanged(object source, FileSystemEventArgs e)
+        private static void OnChanged(object source, FileSystemEventArgs e)
         {
             DisplayMessage(e);
         }
@@ -51,7 +58,7 @@ namespace FileWatcher.Service
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="e">The <see cref="FileSystemEventArgs"/> instance containing the event data.</param>
-        public static void OnCreated(object source, FileSystemEventArgs e)
+        private static void OnCreated(object source, FileSystemEventArgs e)
         {
             DisplayMessage(e);
 
@@ -59,10 +66,10 @@ namespace FileWatcher.Service
             var data = _fileReader.GetContent(e.FullPath);
             data.AppId = Guid.NewGuid();
 
-            var unitOfWork = new UnitOfWork<FileWatcherContext>();
-            var repo = unitOfWork.GetRepository<XmlData>();
+            
+            var repo = _unitOfWork.GetRepository<XmlData>();
             repo.Add(data);
-            unitOfWork.Save();
+            _unitOfWork.Save();
         }
 
         /// <summary>
@@ -70,9 +77,11 @@ namespace FileWatcher.Service
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="e">The <see cref="FileSystemEventArgs"/> instance containing the event data.</param>
-        public static void OnDeleted(object source, FileSystemEventArgs e)
+        private static void OnDeleted(object source, FileSystemEventArgs e)
         {
             DisplayMessage(e);
+            
+            //todo: do your delete logic here 
         }
 
         /// <summary>
@@ -80,9 +89,11 @@ namespace FileWatcher.Service
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="e">The <see cref="FileSystemEventArgs"/> instance containing the event data.</param>
-        public static void OnRenamed(object source, FileSystemEventArgs e)
+        private static void OnRenamed(object source, FileSystemEventArgs e)
         {
             DisplayMessage(e);
+
+            //todo: do your rename logic here 
         }
 
         /// <summary>
@@ -91,8 +102,10 @@ namespace FileWatcher.Service
         /// <param name="source">The source.</param>
         /// <param name="e">The <see cref="FileSystemEventArgs"/> instance containing the event data.</param>
         /// <exception cref="System.NotImplementedException"></exception>
-        public static void OnError(object source, FileSystemEventArgs e)
+        private static void OnError(object source, FileSystemEventArgs e)
         {
+            //todo: do your errorHandling logic here 
+
             throw new NotImplementedException();
         }
 
