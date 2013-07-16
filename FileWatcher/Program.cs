@@ -8,10 +8,19 @@ using Ninject;
 namespace FileWatcher
 {
     class Program
-    { 
+    {
+        public static void DisplayHeader()
+        {
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("Service started on {0}", DateTime.Now);
+            Console.WriteLine("--------------------------------------------------");
+        }
 
         static void Main(string[] args)
         {
+           
+            DisplayHeader();
+
             IKernel kernel = new StandardKernel();
             kernel.Load(Assembly.GetExecutingAssembly());
             IFileReader fileReader = kernel.Get<IFileReader>();
