@@ -1,9 +1,3 @@
-//   _  _  ____  _  _  _____ 
-//  ( \( )(_  _)( \( )(  _  )
-//   )  (  _)(_  )  (  )(_)( 
-//  (_)\_)(____)(_)\_)(_____)
-
-
 FileWatcher
 ===========
 - No need to create a database prior to run this app
